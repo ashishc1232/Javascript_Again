@@ -1,0 +1,3 @@
+# Inversion of control:- When you loose your control from your code when using callback.
+
+==> fetch is an return promise.
