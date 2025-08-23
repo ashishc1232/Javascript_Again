@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Filter</title>
 </head>
+
 <body>
-    <script src="./closure.js"></script>
+    <script>
+        const arr = [12, 33, 56, 77, 21, 64]
+        const res = arr.filter((arr) => arr % 2 == 0)
+        // console.log(res)
+
+        const val = arr.reduce((num1, num2) => num1 + num2)
+        // console.log(val)
+
+        let getPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let success = true;
+                if (success) {
+                    console.log("success")
+                }
+                else {
+                    console.log("req is rejected");
+                }
+            }, 3000)
+        })
+
+        async function getPro() {
+            try {
+                let data = await getPromise;
+                console.log(data)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        // getPro()
+
+
+        // let myarr=[11,12,13,14,15,16]
+
+        // let [one, two,t]=myarr
+        // console.log(t);
+        // console.log(two);
+
+        // let myobj={
+        //     name:"Ashish",
+        //     city:"Mumbai"
+        // }
+
+        // const {name}=myobj
+        // console.log(name)
+        // getPromise
+        //     .then(() => {
+        //         console.log("success")
+        //     })
+        //     .catch((err) => {
+        //         console.log(err)
+        //     })
+
+        //     console.log(getPromise)
+
+        const cities = ["Pune", "Banglore", "Mumbai", "Delhi"]
+        const temp = [12, 45, 77, 99]
+
+        let result = [...cities, "Nashik", "Nagar"];
+        console.log(result)
+
+
+        //Template Literals
+        const title = 'JavaScript ES6';
+        const description = 'Template Literals are awesome!';
+
+        const html = `
+     <div class="post">
+    <h1>${title}</h1>
+    <p>${description}</p>
+    </div>
+    `;
+
+        console.log(html);
+
+    </script>
 </body>
+
 </html>
